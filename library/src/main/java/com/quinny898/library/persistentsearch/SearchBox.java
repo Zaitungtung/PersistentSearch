@@ -740,17 +740,31 @@ public class SearchBox extends RelativeLayout {
 				0);
 	}
 
-	
-
-	
-
-	private void setLogoTextInt(String text) {
-		logo.setText(text);
+	/***
+	 * Set the text of the logo (default text when closed)
+	 * @param text Text
+	 */
+	public void setLogoText(String text) {
+		this.logoText = text;
+		setLogoTextInt(text);
 	}
 
-	
-	
-	
+
+	/***
+	 * Set the text color of the logo
+	 * @param color
+	 */
+	public void setLogoTextColor(int color){
+		logo.setTextColor(color);
+	}
+
+	/***
+	 * Set the text typeface of the logo
+	 * @param typeface
+	 */
+	public void setLogoTypeface(Typeface typeface){
+		logo.setTypeface(typeface);
+	}
 
 	private void search(String text) {
 		SearchResult option = new SearchResult(text, null);
